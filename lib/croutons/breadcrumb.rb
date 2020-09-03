@@ -1,10 +1,11 @@
 module Croutons
   class Breadcrumb
-    attr_reader :label, :url
+    attr_reader :label, :url, :remote
 
-    def initialize(label, url = nil)
+    def initialize(label, url = nil, remote = nil)
       self.label = label
       self.url = url
+      self.remote = remote
     end
 
     def labelize
@@ -21,6 +22,6 @@ module Croutons
 
     private
 
-    attr_writer :label, :url
+    attr_writer :label, :url, :remote
   end
 end

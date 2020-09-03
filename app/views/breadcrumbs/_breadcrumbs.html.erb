@@ -1,7 +1,7 @@
 <ul class="breadcrumbs">
   <% breadcrumbs.each do |breadcrumb| %>
     <% if breadcrumb.link? %>
-      <li><%= link_to breadcrumb.label, breadcrumb.url %></li>
+      <li><%= link_to breadcrumb.label, breadcrumb.url, remote: breadcrumb.remote %></li>
     <% else %>
       <li><%= breadcrumb.label %></li>
     <% end %>
